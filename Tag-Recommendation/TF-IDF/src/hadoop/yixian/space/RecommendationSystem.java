@@ -9,16 +9,16 @@ public class RecommendationSystem {
 		
 		
 		String HDFSAddr = "hdfs://localhost:8020/";
-		String originalFile = HDFSAddr + "tag.dat"; 
+		String originalFileAddr = HDFSAddr + "tag.dat"; 
 		String folderAddr = HDFSAddr + "TAG/";
 		
 		
 		
-		String[] address = {HDFSAddr+"delicious.dat",HDFSAddr+"tag.data"};		
+		String[] address = {originalFileAddr,folderAddr+"M1"};		
 		int res = ToolRunner.run(new Configuration(), new MapRed1Driver(), address);
 		
 			
-	}
+	} 
 	
 
 

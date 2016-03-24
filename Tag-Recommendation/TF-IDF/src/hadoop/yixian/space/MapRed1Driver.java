@@ -21,8 +21,8 @@ public class MapRed1Driver extends Configured implements Tool{
 		Job job3 = Job.getInstance(configuration);
 		
 		job3.setJobName("---");
-		job3.setMapperClass(Mapper1.class);
-		job3.setReducerClass(Reducer1.class);
+		job3.setMapperClass(M1Mapper1.class);
+		job3.setReducerClass(M1Reducer1.class);
 		
 		job3.setMapOutputKeyClass(Text.class);
 		job3.setMapOutputValueClass(Text.class);

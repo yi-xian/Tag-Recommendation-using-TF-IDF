@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
-public class Reducer1 extends Reducer<Text, Text, Text, Text>{
+public class M1Reducer1 extends Reducer<Text, Text, Text, Text>{
 
 	
 	@Override
@@ -15,6 +15,8 @@ public class Reducer1 extends Reducer<Text, Text, Text, Text>{
 		for(Text val : values){
 			count++;
 		}
+		
+		
 		context.write(new Text(key), new Text(count.toString()));
 		
 	}
